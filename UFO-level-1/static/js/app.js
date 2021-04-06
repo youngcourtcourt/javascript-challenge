@@ -57,11 +57,19 @@ function runEnter(){
 
     body.html("")
 
-    var inputValue=dateInputElement.property("value")
+    var dateInputValue=dateInputElement.property("value")
+
+    var cityInputValue=cityInputElement.property("value")
+
+    var stateInputValue=stateInputElement.property("value")
+
+    var countryInputValue=countryInputElement.property("value")
+
+    var shapeInputValue=shapeInputElement.property("value")
 
 // Filter data based on user input
     
-    var filteredData=data.filter(data=>data.datetime===inputValue)
+    var filteredData=data.filter(data=>data.datetime===dateInputValue)
 
     // console.log(filteredData)
 
