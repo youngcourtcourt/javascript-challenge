@@ -8,8 +8,6 @@ var table=d3.select("#ufo-table")
 var body=d3.select("tbody")
 
 
-
-
 // row.append("td").text()
 
 data.forEach(entry=>{
@@ -41,6 +39,8 @@ form.on("submit", runEnter)
 
 var inputElement=d3.select("#datetime")
 
+// Define function for change event
+
 function runEnter(){
 
     d3.event.preventDefault()
@@ -53,19 +53,26 @@ function runEnter(){
 
 // Filter data based on user input
     
-
     var filteredData=data.filter(data=>data.datetime===inputValue)
 
     // console.log(filteredData)
 
     filteredData.forEach(entry=>{
 
+        // add row to body for each item
+
         var row=body.append("tr")
+
+        // cycle through each object item
     
-        
         Object.entries(entry).forEach(([key, value])=>{
         
+            // append data row for each value
+
             var cell=row.append("td")
+
+            // Display text
+
             cell.text(value)
     
         })
