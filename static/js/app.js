@@ -47,6 +47,8 @@ function runEnter(){
 
     // Retireve value from input element
 
+    body.html("")
+
     var inputValue=inputElement.property("value")
 
 // Filter data based on user input
@@ -54,7 +56,20 @@ function runEnter(){
 
     var filteredData=data.filter(data=>data.datetime===inputValue)
 
-    console.log(filteredData)
+    // console.log(filteredData)
+
+    filteredData.forEach(entry=>{
+
+        var row=body.append("tr")
+    
+        
+        Object.entries(entry).forEach(([key, value])=>{
+        
+            var cell=row.append("td")
+            cell.text(value)
+    
+        })
+    })
 
 }
 
