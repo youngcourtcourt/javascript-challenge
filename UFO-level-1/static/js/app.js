@@ -37,15 +37,7 @@ form.on("submit", runEnter)
 
 // Select input element that will contain our user input
 
-var dateInputElement=d3.select("#datetime")
-
-var cityInputElement=d3.select("#city")
-
-var stateInputElement=d3.select("#state")
-
-var countryInputElement=d3.select("#country")
-
-var shapeInputElement=d3.select("#shape")
+var inputElement=d3.select("#datetime")
 
 // Define function for change event
 
@@ -57,19 +49,11 @@ function runEnter(){
 
     body.html("")
 
-    var dateInputValue=dateInputElement.property("value")
-
-    var cityInputValue=cityInputElement.property("value")
-
-    var stateInputValue=stateInputElement.property("value")
-
-    var countryInputValue=countryInputElement.property("value")
-
-    var shapeInputValue=shapeInputElement.property("value")
+    var inputValue=inputElement.property("value")
 
 // Filter data based on user input
     
-    var filteredData=data.filter(data=>data.datetime===dateInputValue)
+    var filteredData=data.filter(data=>data.datetime===inputValue)
 
     // console.log(filteredData)
 
