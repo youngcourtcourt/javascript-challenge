@@ -66,11 +66,12 @@ function runEnter(){
 
     var shapeInputValue=shapeInputElement.property("value")
 
-    console.log(dateInputValue)
-    console.log(cityInputValue)
-    console.log(stateInputValue)
-    console.log(countryInputValue)
-    console.log(shapeInputValue)
+
+    // console.log(dateInputValue)
+    // console.log(cityInputValue)
+    // console.log(stateInputValue)
+    // console.log(countryInputValue)
+    // console.log(shapeInputValue)
 
 
     
@@ -88,26 +89,26 @@ function runEnter(){
     console.log(filteredData)
 
 
-    // filteredData.forEach(entry=>{
+    filteredData.forEach(entry=>{
 
-    //     // add row to body for each item
+        // add row to body for each item
 
-    //     var row=body.append("tr")
+        var row=body.append("tr")
 
-    //     // cycle through each object item
+        // cycle through each object item
     
-    //     Object.entries(entry).forEach(([key, value])=>{
+        Object.entries(entry).forEach(([key, value])=>{
         
-    //         // append data row for each value
+            // append data row for each value
 
-    //         var cell=row.append("td")
+            var cell=row.append("td")
 
-    //         // Display text
+            // Display text
 
-    //         cell.text(value)
+            cell.text(value)
     
-    //     })
-    // })
+        })
+    })
 
   
 }
