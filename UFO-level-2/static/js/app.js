@@ -66,14 +66,6 @@ function runEnter(){
 
     var shapeInputValue=shapeInputElement.property("value")
 
-
-    // console.log(dateInputValue)
-    // console.log(cityInputValue)
-    // console.log(stateInputValue)
-    // console.log(countryInputValue)
-    // console.log(shapeInputValue)
-
-
     
 
 // Filter data based on user input
@@ -86,7 +78,7 @@ function runEnter(){
         shape.toLowerCase()===shapeInputValue.toLowerCase()
     })
 
-    console.log(filteredData)
+    console.log(city)
 
 
     filteredData.forEach(entry=>{
